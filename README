@@ -1,0 +1,41 @@
+(1) Go to "emsa" directory, and compile the source code
+
+(2) Copy the executable "msa" to the current directory
+
+(3) ./msa [max order] [molecule type]
+    for example: ./msa 5 2 2 1
+
+(4) Run postemsa.pl: ./postemsa.pl 5 2 2 1
+    you'll get bemsa.f90
+
+    and ./derivative.pl 5 2 2 1
+    you'll get dbemsa.90 (useful for analytical gradient)
+
+(5) Modify the fit.f90 code properly:
+    (a) number of atoms
+    (b) number of data points
+    (c) number of coefficients (bemsa.f90 tells the number of coeff.)
+    (d) a0 value
+
+(6) Compile the fitting code by typing:
+    make fit.x
+
+(7) The pts.dat file contains the geometries and the corresponding energies
+    first line is the number of atoms
+    second line is the energy in Hartree
+    all the following lines are the Cartesian coordinates in Angstrom
+    (The order of the atoms must agree with A2B2C)
+
+(8) Run the fitting code: ./fit.x
+    All the coefficients will be in "coeff.dat"
+
+(9) Modify the pes_shell.f90 and getpot.f90 properly:
+    (a) pes_shell.f90: number of coefficients, number of monomials
+    (b) getpot.f90: number of atoms
+
+(10) Compile the getpot:
+     make getpot.x
+
+(11) Run the test: ./getpot.x test.xyz
+     The ab initio energy, PES energy (in Hartree) and the difference (in cm-1) will be in test.eng
+     The finite difference gradient and analytical gradient will be in test.grd.
