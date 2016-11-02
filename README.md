@@ -1,7 +1,7 @@
 # PES-Fitting-MSA
 1. Download MSA.zip
 2. Unzip MSA.zip
-3. Read the 'readme.txt'
+3. Read the 'README.txt'
 
 For more information, see Bowmna's Group: https://scholarblogs.emory.edu/bowman/
 
