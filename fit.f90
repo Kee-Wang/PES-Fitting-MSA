@@ -17,7 +17,7 @@ implicit none
   character :: symb
 
   natm=XXX         ! change to the number of atoms
-  ncoeff=YYY       ! change to the number of coeff. (size of c in bemsa.f90)
+  ncoeff=YYY       ! change to the number of coeff. (size of c in basis.f90)
   data_size=ZZZ    ! change to the number of data points in pts.dat
   a0=2.0_dp
 

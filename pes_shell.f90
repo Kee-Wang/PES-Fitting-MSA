@@ -69,9 +69,9 @@ contains
     real,dimension(3,size(xyz,2)*(size(xyz,2)-1)/2)::dr
     real,dimension(size(xyz,2)*3,size(xyz,2)*(size(xyz,2)-1)/2)::drdx
     real,dimension(1:YYY)::p   ! change to number of popynomials
-                               ! (size of p in bemsa.f90)
+                               ! (size of p in basis.f90)
     real,dimension(1:ZZZ)::m  ! change to number of monomials
-                              ! (size of m in bemsa.f90
+                              ! (size of m in basis.f90
     real::a0
     integer::i,j,k
 
