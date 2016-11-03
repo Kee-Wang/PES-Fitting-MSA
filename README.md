@@ -1,3 +1,5 @@
+Please read me before you proceed!
+
 PES-Fitting-MSA.zip is the code package for PES fitting using MSA. It is develped in Bowman group. In order to use:
 
 1. Download zip file.
