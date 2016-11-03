@@ -1,5 +1,5 @@
 PES-Fitting-MSA.zip is the code package for PES fitting using MSA. In order to use:
 
 1. Download zip file.
-2. Unzip the file.
+2. Unzip the file. (You can use 'unzip PES-Fitting-MSA.zip' in command line)
 3. Read the readme.txt inside zip file.
