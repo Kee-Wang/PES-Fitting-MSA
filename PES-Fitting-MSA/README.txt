@@ -1,8 +1,9 @@
-This the the MSA software that fits the potential energy surface using
+This is the MSA software that fits the potential energy surface using
 fitting bases that are invariant with respect to permutations of like
 atoms. The detailed theory is described in the paper
 Xie, Z.; Bowman, J. M. J. Chem. Theory Comput. 2010, 6, 26-34
 
+Requirements:
 To use this software, you need a Fortran 90 compiler, a C++ compiler, 
 and the "dgelss" subroutine from LAPACK. Also Perl is required.
 We've tested on Linux operating system, using "ifort" and "g++" as the
@@ -12,13 +13,11 @@ flags. LAPACK is available at
 www.netlib.org,
 and is also included in the optimized libraries such as ACML and MKL.
 
-(0) First download the software by clicking "Clone or Download", and
-    you will get a "PES-Fitting-MSA-master.zip". After unzipping, the
-    following folders and files should be included in the package:
+Here is a list of folders or files in the package:
     (A) A folder called "emsa", which contains the C++ codes that
-        generate the monomials and polynomials
+        generate the monomials and polynomials.
     (B) Two Fortran code templates "fit.f90" and "pes_shell.f90". You
-        need to modify these two files later
+        need to modify these two files later.
     (C) One example Fortran program "getpot.f90" that uses the fitted
         potential energy surface to calculate the potential of a given
         geometry.
@@ -31,26 +30,26 @@ and is also included in the optimized libraries such as ACML and MKL.
         and the expected output is written in the file "expected.out".
     (G) This "README" file.
 
-Here are the procedures and a few explanations for using the software.
-These procedures are also described in our tutorial video.
+Here are the procedure and a few explanations for using the software.
+The procedure is also described in our tutorial video.
 www.youtube.com/watch?v=WzChdPWc7tQ
-We recommend that you watch the video first and get fimiliar with this
+We recommend that you watch the video first and get familiar with this
 software.
 
 (1) Go to "emsa" folder, and compile the source code by using the
-    Makefilei in this folder. A executable "msa" should be generated.
+    Makefile in this folder. A executable "msa" should be generated.
     This Makefile uses g++ compiler for C++ and works on Linux machines.
     If you are using other compilers or operating systems, you may need
-    to modify this file.
+    to modify this Makefile.
 
 (2) Move the executable to the main folder "PES-Fitting-MSA-master" and
     run it as:
     ./msa [max order] [molecule type]
     for example: ./msa 4 2 2 1
-    (A) 4 is the polynomial order. Typically we use 5, 6, or 7.
+    (A) 4 is the polynomial order. Typically we use higher orders.
         But for this demonstration, we just use 4 because it's fast.
         The number of coefficients increases rapidly with the polynomial
-        order. So you may not want to start with a high order polynomial.
+        order. So you may want to start with low polynomial orders.
         Also, we always want the number of coefficients to be
         sufficiently smaller than the number of ab initio energies
         to avoid overfitting.
@@ -62,7 +61,7 @@ software.
 
 (4) Run postemsa.pl and derivative.pl:
     ./postemsa.pl 4 2 2 1
-    The Pearl script reads the output of msa (MOL_2_2_1_4.*) and creats
+    The Perl script reads the output of msa (MOL_2_2_1_4.*) and creates
     the Fortran file called basis.f90, which defines the monomials
     and polynomials as the fitting bases
 
@@ -81,7 +80,7 @@ software.
     make fit.x
     Here another Makefile to compile the Fortran code is provided,
     and depending on your operating system and compiler, you may need
-    to change it. This Makefile uses "ifort" as Fortran compiler.
+    to modify it. This Makefile uses "ifort" as the Fortran compiler.
     The fit.f90 uses "dgelss" from the linear algebra package (LAPACK)
     for the standard linear least-squares problem.
 
@@ -89,12 +88,16 @@ software.
     First line is the number of atoms, and second line is the energy in
     Hartree. All the following lines are the Cartesian coordinates in
     Angstrom. The order of the atoms must agree with A2B2C
+    In our example, the energy is the interaction between H2 and H2O,
+    which is the difference between the dimer energy and the monomer
+    energies. But our fitting software can be used for both interaction
+    and full potential.
 
 (8) Run the fitting code: ./fit.x
     All the coefficients will be in "coeff.dat"
 
 (9) Modify the pes_shell.f90:
-    pes_shell.f90 defines the subroutine to use the PES. It is a
+    pes_shell.f90 defines the subroutine to use the PES. It is also a
     template.
     (A) replace XXX with the number of coefficients (size of c in
         basis.f90)
@@ -103,11 +106,12 @@ software.
     (C) replace ZZZ with the number of monomials (size of m in
         basis.f90)
 
-(10) Compile the getpot:
+(10) Compile the getpot using the Makefile:
      make getpot.x
 
 (11) Run the test:
      ./getpot.x test.xyz
-     The energy and first derivative of energy (gradient) will be in
-     file test.out. It should be the same as the expected.out (of
-     course small numerical difference like 10e-7 or 10e-8 is expected)
+     The energy and first derivative of energy (gradient) will be
+     written in the file test.out. It should be the same as the
+     expected.out (of course small numerical difference like 10e-7 or
+     10e-8 is expected)
