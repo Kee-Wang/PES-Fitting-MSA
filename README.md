@@ -25,6 +25,7 @@ Python script: Qingfeng Kee Wang
 
 # More Info
 A video tutorial can be accessed here: https://youtu.be/nUp9QDGHfUY
+
 For more details: https://scholarblogs.emory.edu/bowman/msa/
 
 
