@@ -44,7 +44,7 @@ files should be in the package:
 
 Here are the procedure and a few explanations for using the software.
 The procedure is also described in our tutorial video.
-https://www.youtube.com/watch?v=vGATfUzEeAE
+https://youtu.be/nUp9QDGHfUY
 We recommend that you watch the video first and get familiar with this
 software.
 
