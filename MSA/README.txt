@@ -44,7 +44,7 @@ files should be in the package:
 
 Here are the procedure and a few explanations for using the software.
 The procedure is also described in our tutorial video.
-
+https://www.youtube.com/watch?v=vGATfUzEeAE
 We recommend that you watch the video first and get familiar with this
 software.
 
@@ -101,3 +101,8 @@ software.
     do in the "getpot.f90" example), and you can calculate the potential
     of any configuration using the "f" function, and the gradient using the
     "g" function.
+
+Credits:
+MSA codes: Zhen Xie
+gradient extension: Chen Qu
+Python script: Qingfeng Kee Wang
