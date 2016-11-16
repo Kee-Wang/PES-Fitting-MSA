@@ -8,6 +8,7 @@ To use this software, you need a
 (A) a Fortran 90 and a C++ compiler;
 (B) "dgelss" subroutine from LAPACK
 (C) Perl and Pythond
+(D) Python 2
 
 We've tested on Linux operating system, using "ifort" and "g++" as the
 Fortran and C++ compilers, and Intel MKL library for the "dgelss".
