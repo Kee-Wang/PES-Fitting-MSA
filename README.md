@@ -33,3 +33,12 @@ kee.wang@emory.edu
 *  R. Conte, C. Qu, and J. M. Bowman, Permutationally Invariant Fitting of Many-Body, Non-covalent Interactions with Application to Three-Body Methane–Water–Water, R. Conte, C. Qu, and J. M. Bowman, J. Chem. Theory Comput. 2015, 11, 1631-1638.
 
 
+# Version log
+## ver 1.1, Nov. 21, 2016
+
+* Added feature so that people can enter their own weights.
+
+## ver 1.0
+
+* First usable MSA package was distributed.
+
