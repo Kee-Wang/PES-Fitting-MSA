@@ -33,8 +33,11 @@ kee.wang@emory.edu
 
 
 # Version log
-## ver 1.2, Nov. 29, 2016
 
+
+## ver 1.2/1.3, Nov. 29, 2016
+
+* Updated README.text info so that video link was pointed to group page.
 * Minor correction. Corrected energies in sample file
 
 ## ver 1.1, Nov. 21, 2016
