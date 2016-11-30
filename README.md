@@ -34,6 +34,10 @@ kee.wang@emory.edu
 
 
 # Version log
+## ver 1.2, Nov. 29, 2016
+
+* Minor correction. Corrected energies in sample file
+
 ## ver 1.1, Nov. 21, 2016
 
 * Added feature so that people can enter their own weights.
