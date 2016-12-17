@@ -34,6 +34,9 @@ kee.wang@emory.edu
 
 # Version log
 
+## ver 1.3, Dec. 26, 2016
+* a0 value in derivative.pl was corrected from 2d0 to 2d5. Thanks Bryan (University of Colorado Boulder) for pointing that out.
+
 
 ## ver 1.2, Nov. 29, 2016
 
