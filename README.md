@@ -34,8 +34,11 @@ kee.wang@emory.edu
 
 # Version log
 
-## ver 1.3, Dec. 26, 2016
-* a0 value in derivative.pl was corrected from 2d0 to 2d5. Thanks Bryan (University of Colorado Boulder) for pointing that out.
+## ver 1.4, Dec. 19, 2016
+* Added feature so that people can enter their own desired a0 value. -- by Qu Chen
+
+## ver 1.3, Dec. 16, 2016
+* a0 value in derivative.pl was fixed from 2d0 to 2d5. -- Thanks Bryan (University of Colorado Boulder) for pointing that out.
 
 
 ## ver 1.2, Nov. 29, 2016
