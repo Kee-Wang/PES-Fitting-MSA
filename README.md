@@ -35,7 +35,7 @@ kee.wang@emory.edu
 # Version log
 
 ## ver 1.4, Dec. 19, 2016
-* Added feature so that people can enter their own desired a0 value. -- by Qu Chen
+* Added feature so that people can enter their own desired a0 value. -- by Chen Qu
 
 ## ver 1.3, Dec. 16, 2016
 * a0 value in derivative.pl was fixed from 2d0 to 2d5. -- Thanks Bryan (University of Colorado Boulder) for pointing that out.
@@ -43,14 +43,14 @@ kee.wang@emory.edu
 
 ## ver 1.2, Nov. 29, 2016
 
-* Updated README.text info so that video link was pointed to group page.
-* Minor correction. Corrected energies in sample file
+* Updated README.text info so that video link was pointed to group page. -- by Chen Qu
+* Minor correction. Corrected energies in sample file -- by Chen Qu
 
 ## ver 1.1, Nov. 21, 2016
 
-* Added feature so that people can enter their own weights.
+* Added feature so that people can enter their own weights. -- by Chen Qu
 
 ## ver 1.0
 
-* First usable MSA package was distributed.
+* First usable MSA package was distributed. -- by Kee
 
