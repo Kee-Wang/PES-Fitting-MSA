@@ -34,6 +34,9 @@ kee.wang@emory.edu
 
 # Version log
 
+## ver 1.5, Dec. 19, 2016
+* Compatibility improved so it works for both Python 2 and Python 3. -- Kee 
+
 ## ver 1.4, Dec. 19, 2016
 * Added feature so that people can enter their own desired a0 value. Use `sed` to change a0 in `gradient.f90` directly.  -- by Chen Qu
 
