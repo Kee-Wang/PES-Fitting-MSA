@@ -1,8 +1,7 @@
 # In order to use MSA:
 
-1. Download zip file.
-2. Unzip the file. (You can use command 'unzip MSA.zip' )
-3. Read the readme.txt inside zip file.
+1. Download contents of the git repository.
+2. Read readme.txt.
 
 # About MSA
 
